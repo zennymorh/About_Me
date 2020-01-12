@@ -9,9 +9,9 @@ import androidx.databinding.DataBindingUtil
 import com.zennymorh.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+//declaring a variable binding from the ActivityMainBinding class
     private lateinit var binding: ActivityMainBinding
-
+//creating an object of the data class
     private var myName: MyName = MyName("Zainab Jimoh")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+//connecting the data class to my binding stuff
         binding.myName = myName
 
         binding.doneButton.setOnClickListener {
